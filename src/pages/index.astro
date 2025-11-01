@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  { 
+    icon: 'fas fa-paint-brush', 
+    title: 'Eerie Fan Art Gallery', 
+    text: 'Explore haunting illustrations, from Tinky Winky cloaked in fog to Po\'s fiery skull lantern.' 
+  },
+  { 
+    icon: 'fas fa-comments', 
+    title: 'Spooky Discussions', 
+    text: 'Dive into forums where we debate the darker lore of Teletubby myths and fan theories that chill the spine.' 
+  },
+  { 
+    icon: 'fas fa-calendar-alt', 
+    title: 'Gothic Events', 
+    text: 'Attend virtual gatherings for Halloween parties, midnight storytelling, and spooky cosplay conventions.' 
+  }
+];
+
+const testimonials = [
+  { 
+    quote: 'I never thought I\'d find a place where Tinky Winky could be both adorable and terrifying!', 
+    author: 'Morag the Mystic' 
+  },
+  { 
+    quote: 'These skulltubbies are the only ones who understand my love for creepy teletubbies!', 
+    author: 'Laa-Laa Lament' 
+  },
+  { 
+    quote: 'The gothic art here is absolutely mesmerizing. It\'s like discovering a secret underground gallery.', 
+    author: 'Dipsy Dark' 
+  }
+];
+---
+
+<Layout title="Welcome to Skulltubbies Unite" description="Discover a dark haven for Teletubbies fans embracing the spooky side. Unite with fellow enthusiasts in gothic festivities and eerie explorations.">
+  <!-- Hero Section with Gothic Gradient -->
+  <div class="relative bg-gradient-to-br from-gray-900 to-black py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIyIiBmaWxsPSIjZmZmZmZmIi8+PC9zdmc+')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tighter">
+          Skulltubbies Unite
+        </h1>
+        <div class="h-1 w-32 bg-accent mx-auto mb-8"></div>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 font-light">
+          Uniting Teletubbies Fans in a Spooky Embrace
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/join" class="px-8 py-4 bg-accent text-white font-bold rounded-lg hover:bg-red-900 transition duration-300 transform hover:scale-105">
+            Join the Shadows
+          </a>
+          <a href="/gallery" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition duration-300">
+            Explore Gallery
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center mb-12">
+          <div class="h-1 w-24 bg-accent mr-4"></div>
+          <h2 class="text-3xl font-bold text-white">In the Shadowy Valleys</h2>
+        </div>
+        <div class="prose prose-lg prose-invert max-w-none">
+          <p class="text-gray-300 text-xl mb-6 leading-relaxed">
+            In the shadowy valleys of Teletubby Land, where the sun sets eternally on custard hills and ancient tubby spires, 
+            <span class="text-accent font-bold">Skulltubbies Unite</span> beckons you. We are the clandestine gathering of souls who cherish 
+            the whimsical world of Tinky Winky, Dipsy, Laa-Laa, and Po—but with a <span class="text-accent">gothic twist</span>. Imagine your favorite 
+            colorful characters reimagined in midnight hues, adorned with skeletal grins and whispering winds.
+          </p>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Join us in our nocturnal realm where the sacred and sinister dance together. Here, Tinky Winky's traditional colors 
+            are transformed into deep purples and blacks, while Po's cheerful nature becomes a haunting lantern glow. This is 
+            not just a community—it's a sanctuary for the unconventional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-black">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Why Join the Shadows?</h2>
+        <div class="h-1 w-32 bg-accent mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-accent transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-accent text-4xl mb-6">
+              <i class={feature.icon}></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+            <p class="text-gray-400 leading-relaxed">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Community Voices</h2>
+        <div class="h-1 w-32 bg-accent mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} class="bg-gray-900 p-8 rounded-xl border border-gray-800 relative">
+            <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
+            <div class="text-gray-300 italic mb-6 text-lg leading-relaxed">
+              "{testimonial.quote}"
+            </div>
+            <div class="text-accent font-bold">— {testimonial.author}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-black via-gray-900 to-black">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Embrace the Darkness?</h2>
+        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          Join thousands of fellow skulltubbies in our gothic haven of creativity and camaraderie.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/join" class="px-10 py-5 bg-accent text-white font-bold rounded-lg text-lg hover:bg-red-900 transition duration-300 transform hover:scale-105">
+            Become a Skulltubby
+          </a>
+          <a href="/events" class="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:text-black transition duration-300">
+            View Upcoming Events
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
